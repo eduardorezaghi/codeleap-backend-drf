@@ -33,5 +33,5 @@ build-backend = "poetry.core.masonry.api"
 [tool.pytest.ini_options]
 DJANGO_SETTINGS_MODULE = "core.settings"
 python_files = ["test_*.py", "*_test.py"]
-addopts = "-v --cov=src"
+addopts = "-v --cov=api --cov-report=term-missing"
 testpaths = ["tests"]
