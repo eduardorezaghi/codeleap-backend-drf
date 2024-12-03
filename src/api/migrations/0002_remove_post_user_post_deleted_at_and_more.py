@@ -10,26 +10,9 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.RemoveField(
-            model_name='post',
-            name='user',
-        ),
-        migrations.AddField(
-            model_name='post',
-            name='deleted_at',
-            field=models.DateTimeField(blank=True, null=True),
-        ),
-        migrations.AddField(
-            model_name='post',
-            name='updated_datetime',
-            field=models.DateTimeField(auto_now=True),
-        ),
         migrations.AddField(
             model_name='post',
             name='username',
             field=models.CharField(blank=True, default='Anonymous', max_length=255),
-        ),
-        migrations.DeleteModel(
-            name='User',
         ),
     ]

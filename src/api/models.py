@@ -15,9 +15,6 @@ class Post(models.Model):
     username = models.CharField(max_length=255, default='Anonymous', blank=True)
     content = models.TextField()
     created_datetime = models.DateTimeField(auto_now_add=True)
-    updated_datetime = models.DateTimeField(auto_now=True)
-    # soft delete
-    deleted_at = models.DateTimeField(null=True, blank=True)
     # TODO: We could use this field if we wanted to have a granular control over the users
     # user = models.ForeignKey(User, on_delete=models.CASCADE)
 
