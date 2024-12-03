@@ -6,5 +6,10 @@
     },
     "ruff.enable": true,
     "ruff.organizeImports": true,
-    "ruff.nativeServer": true
+    "ruff.nativeServer": true,
+    "python.testing.pytestArgs": [
+        "src"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
 }
