@@ -1,0 +1,10 @@
+{
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.formatOnSave": true,
+        "editor.wordBasedSuggestions": "allDocuments"
+    },
+    "ruff.enable": true,
+    "ruff.organizeImports": true,
+    "ruff.nativeServer": true
+}
