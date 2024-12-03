@@ -32,4 +32,4 @@ class PostCreateSerializer(serializers.ModelSerializer):
 class PostUpdateSerializer(serializers.ModelSerializer):
     class Meta:
         model = Post
-        fields = ["title", "content", "updated_datetime"]
+        fields = ["title", "content"]
