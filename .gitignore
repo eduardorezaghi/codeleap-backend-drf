@@ -26,9 +26,6 @@ media
 # PyCharm
 .idea/
 
-# VS Code
-.vscode/
-
 # Byte-compiled / optimized / DLL files
 *.py[cod]
 *$py.class

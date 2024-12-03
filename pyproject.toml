@@ -16,6 +16,7 @@ gunicorn = "^23.0.0"
 django-stubs = "^5.1.1" # Type stubs for Django
 djangorestframework-stubs = "^3.15.1" # Type stubs for DRF
 psycopg = "^3.2.3"
+debugpy = "^1.8.9"
 
 
 [tool.poetry.group.dev.dependencies]
