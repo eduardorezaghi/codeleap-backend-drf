@@ -19,6 +19,18 @@ class PostViewSet(viewsets.ModelViewSet):
             return PostUpdateSerializer
         return PostSerializer
 
+    def create(self, request, *args, **kwargs):
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        serializer.save(username=request.data.get("username"))
+        headers = self.get_success_headers(serializer.data)
+        return Response(
+            serializer.data, status=status.HTTP_201_CREATED, headers=headers
+        )
+
     def update(self, request, *args, **kwargs):
-        response = {"detail": 'Method "PUT" not allowed.'}
-        return Response(response, status=status.HTTP_405_METHOD_NOT_ALLOWED)
+        if request.method == "PUT":
+            response = {"detail": 'Method "PUT" not allowed.'}
+            return Response(response, status=status.HTTP_405_METHOD_NOT_ALLOWED)
+
+        return super().update(request, *args, **kwargs)
